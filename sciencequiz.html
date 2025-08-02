@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Science Quiz for Kids</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- We are using the Tailwind CSS CDN for a clean and responsive design. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 flex items-center justify-center min-h-screen p-4">
+
+  <!-- Main container for the quiz -->
+  <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl max-w-2xl w-full">
+    <h1 class="text-4xl md:text-5xl font-bold text-center text-green-700 mb-4">
+      🌈 Interactive Science Quiz 🌈
+    </h1>
+    
+    <!-- Timer display -->
+    <div id="timerDisplay" class="text-center text-2xl font-bold text-red-500 mb-8">
+      Time: 5:00
+    </div>
+
+    <!-- This is where the single question will be displayed -->
+    <div id="questionContainer" class="fade-in space-y-6"></div>
+
+    <!-- This div will display the final score and results -->
+    <div id="result" class="mt-8 text-center text-3xl md:text-4xl font-bold text-orange-600"></div>
+    
+    <!-- Navigation buttons for the quiz -->
+    <div class="flex justify-between mt-8">
+      <button id="skipBtn" class="px-6 py-3 text-lg font-semibold bg-gray-400 text-white rounded-lg shadow-md hover:bg-gray-500 transition-colors">
+        Skip Question
+      </button>
+      <button id="nextBtn" class="px-6 py-3 text-lg font-semibold bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition-colors">
+        Next Question
+      </button>
+    </div>
+
+    <!-- The submit button is initially hidden -->
+    <button id="submitBtn" class="hidden mt-8 mx-auto block px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+      Submit Answers
+    </button>
+    
+    <!-- The play again button is initially hidden -->
+    <button id="playAgainBtn" class="hidden mt-4 mx-auto px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+      Play Again
+    </button>
+  </div>
+  
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
